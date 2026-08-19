@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Movimentar Produto</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/mover_produto.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h1>Movimentar Produto</h1>
+
+        <p>
+            Alteração de endereço do produto no estoque
+        </p>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- ================= ATENÇÃO ================= -->
+
+        <div class="alerta amarelo">
+
+            <span>⚠️</span>
+
+            <span>
+                Atenção: para movimentar um produto,
+                o novo endereço precisa estar livre no estoque.
+            </span>
+
+        </div>
+
+
+        <!-- ================= CARD MOVIMENTAÇÃO ================= -->
+
+        <section class="card">
+
+            <h2>Movimentar produto</h2>
+
+
+            <div class="bloco_movimentar">
+
+
+                <!-- ================= CÓDIGO ================= -->
+
+                <div class="campo">
+
+                    <h3>Código do produto</h3>
+
+                    <input
+                        type="text"
+                        id="input_codigo_do_produto"
+                        placeholder="Digite o código do produto"
+                    >
+
+                </div>
+
+
+                <!-- ================= ENDEREÇO ================= -->
+
+                <div class="campo">
+
+                    <h3>Novo endereço</h3>
+
+                    <input
+                        type="text"
+                        id="input_novo_endereco"
+                        placeholder="Digite o novo endereço"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ================= BOTÃO ================= -->
+
+            <div class="area_botao">
+
+                <button
+                    class="azul"
+                    onclick="mover_produto()"
+                >
+
+                    Mover produto
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= ALERTA DE RESPOSTA ================= -->
+
+        <div
+            id="alerta_estoque"
+            class="alerta"
+            style="display:none;"
+        >
+
+            <span id="alerta_icone"></span>
+
+            <span id="alerta_mensagem"></span>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>

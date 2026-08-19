@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Produtos</title>
+
+    <link rel="stylesheet" href="/static/css/produtos.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>📋 Produtos</h1>
+
+    <p>Cadastro e gerenciamento de produtos</p>
+
+</header>
+
+<main>
+
+    <div class="card">
+
+        <h2>Ações</h2>
+
+        <div class="acoes">
+
+            <button class="azul" onclick="Cadastrar_novo_produto()">
+                ➕ Cadastrar Produto
+            </button>
+
+            <button class="laranja" onclick="Acess_pag_alterar_produto()">
+                ✏️ Alterar Cadastro
+            </button>
+
+            <button class="verde" onclick="Listar_produtos()">
+                📋 Atualizar Lista
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Excluir Produto</h2>
+
+        <div class="linha">
+
+            <input
+                type="text"
+                id="Codigo_produto"
+                placeholder="Código do produto">
+
+            <button class="vermelho"
+                onclick="Excluir_produto()">
+
+                🗑 Excluir
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Consultar Produto</h2>
+
+        <div class="linha">
+
+            <input
+                type="text"
+                id="codigo_produto"
+                placeholder="Código do produto">
+
+            <button class="azul"
+                onclick="consultar_produto()">
+
+                🔍 Consultar
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div
+        class="div_listar_produtos"
+        id="div_listar_produtos">
+
+    </div>
+
+</main>
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>

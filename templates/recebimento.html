@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recebimento</title>
+
+    <link rel="stylesheet" href="/static/css/recebimento.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>📥 Recebimento</h1>
+
+    <p>Gerenciamento dos produtos recebidos</p>
+
+</header>
+
+<main>
+
+    <div class="card">
+
+        <h2>Ações</h2>
+
+        <div class="acoes">
+
+            <button class="azul" onclick="receber()">
+                📥 Receber Produtos
+            </button>
+
+            <button class="verde" onclick="exibir_recebimento()">
+                📋 Atualizar Lista
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Excluir Pacote</h2>
+
+        <div class="linha">
+
+            <input
+                type="text"
+                id="input_pacote"
+                placeholder="Número do pacote">
+
+            <button
+                class="vermelho"
+                onclick="excluir_pacote()">
+
+                🗑 Excluir
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div
+        class="tela"
+        id="tela_rec">
+
+    </div>
+
+</main>
+
+<!-- Notificação -->
+
+<div id="notificacao" class="notificacao">
+
+    <span id="textoNotificacao"></span>
+
+    <div class="barra"></div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Roboto,sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#eef4ff,#dce9ff);
+
+    min-height:100vh;
+
+}
+
+header{
+
+    height:110px;
+
+    background:linear-gradient(90deg,#2563eb,#4f8cff);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+main{
+
+    width:90%;
+
+    margin:40px auto;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+.card h2{
+
+    margin-bottom:20px;
+
+    color:#2563eb;
+
+}
+
+.acoes{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.linha{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+}
+
+input{
+
+    flex:1;
+
+    height:45px;
+
+    border:2px solid #d1d5db;
+
+    border-radius:10px;
+
+    padding:12px;
+
+    font-size:16px;
+
+}
+
+input:focus{
+
+    border-color:#2563eb;
+
+    outline:none;
+
+}
+
+button{
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:14px 22px;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.azul{
+
+    background:#2563eb;
+
+}
+
+.azul:hover{
+
+    background:#1d4ed8;
+
+}
+
+.verde{
+
+    background:#10b981;
+
+}
+
+.verde:hover{
+
+    background:#059669;
+
+}
+
+.vermelho{
+
+    background:#ef4444;
+
+}
+
+.vermelho:hover{
+
+    background:#dc2626;
+
+}
+
+.laranja{
+
+    background:#f59e0b;
+
+}
+
+.laranja:hover{
+
+    background:#d97706;
+
+}
+
+.div_listar_produtos{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    min-height:350px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+    overflow:auto;
+
+}
+
+.div_listar_produtos table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.div_listar_produtos th{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:12px;
+
+}
+
+.div_listar_produtos td{
+
+    padding:10px;
+
+    text-align:center;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+.div_listar_produtos tr:hover{
+
+    background:#eef4ff;
+
+}

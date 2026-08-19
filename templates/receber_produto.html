@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registrar Recebimento</title>
+
+    <link rel="stylesheet" href="/static/css/receber_produto.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>📦 Registrar Recebimento</h1>
+
+    <p>Entrada de produtos no estoque</p>
+
+</header>
+
+<main>
+
+    <div class="card">
+
+        <div class="campo">
+
+            <label>Código do Produto</label>
+
+            <input
+                type="text"
+                id="codigo_produto"
+                placeholder="Digite o código do produto">
+
+        </div>
+
+        <div class="campo">
+
+            <label>Quantidade Recebida</label>
+
+            <input
+                type="number"
+                id="quantidade_recebida"
+                placeholder="0">
+
+        </div>
+
+        <div class="campo">
+
+            <label>Data / Hora</label>
+
+            <input
+                type="datetime-local"
+                id="data_time">
+
+        </div>
+
+        <div class="campo">
+
+            <label>Remetente</label>
+
+            <input
+                type="text"
+                id="remetente"
+                placeholder="Empresa ou fornecedor">
+
+        </div>
+
+        <div class="campo">
+
+            <label>Recebido por</label>
+
+            <input
+                type="text"
+                id="recebimento"
+                placeholder="Nome do responsável">
+
+        </div>
+
+        <button
+            class="btnCadastrar"
+            onclick="Acionar_entrada()">
+
+            📥 Registrar Entrada
+
+        </button>
+
+    </div>
+
+</main>
+
+<!-- Notificação -->
+
+<div id="notificacao" class="notificacao">
+
+    <span id="textoNotificacao"></span>
+
+    <div class="barra"></div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>

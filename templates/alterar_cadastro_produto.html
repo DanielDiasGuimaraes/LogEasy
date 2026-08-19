@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alterar Produto</title>
+
+    <link rel="stylesheet" href="/static/css/alterar_cadastro_produto.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>✏️ Alterar Cadastro</h1>
+
+    <p>Atualização de informações dos produtos</p>
+
+</header>
+
+<main>
+
+    <div class="card">
+
+        <div class="alerta">
+            ⚠️ Ao alterar um produto, as informações do estoque serão atualizadas automaticamente.
+        </div>
+
+        <div class="campo">
+
+            <label>Código do Produto</label>
+
+            <input
+                type="text"
+                id="input_codigo_produto_alterar"
+                placeholder="Digite o código do produto">
+
+        </div>
+
+        <div class="campo">
+
+            <label>Campo que será alterado</label>
+
+            <select id="dados_alterados">
+
+                <option value="produto">Nome do Produto</option>
+                <option value="descricao">Descrição</option>
+                <option value="modelo">Modelo</option>
+                <option value="fabricante">Fabricante</option>
+                <option value="preco_custo">Preço de Custo</option>
+                <option value="preco_venda">Preço de Venda</option>
+
+            </select>
+
+        </div>
+
+        <div class="campo">
+
+            <label>Novo Valor</label>
+
+            <input
+                type="text"
+                id="dados_novos"
+                placeholder="Digite o novo valor">
+
+        </div>
+
+        <button class="btnAlterar" onclick="alterar_prouto()">
+            💾 Salvar Alteração
+        </button>
+
+    </div>
+
+</main>
+
+<!-- Notificação -->
+
+<div id="notificacao" class="notificacao">
+    <span id="textoNotificacao"></span>
+    <div class="barra"></div>
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>

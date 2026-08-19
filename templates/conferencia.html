@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conferência de Produtos</title>
+
+    <link rel="stylesheet" href="/static/css/conferencia.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="input_pacote">
+
+        <label class="label_pacote">
+            🧐 Codigo do pacote:
+        </label>
+
+        <input
+            type="text"
+            id="pacote"
+            class="input_pacote_dados"
+            placeholder="Digite o número do pacote">
+
+        <button
+            class="btn_input_pacote"
+            onclick="selecionar_pacote()">
+
+            Abrir
+
+        </button>
+
+    </header>
+
+    <!-- ================= INFORMAÇÕES ================= -->
+
+    <section class="conferencia">
+
+        <div class="info">
+
+            <span class="titulo">
+                Produto
+            </span>
+
+            <div class="produto" id="produto_div">
+
+            </div>
+
+        </div>
+
+        <div class="info">
+
+            <span class="titulo">
+                Código
+            </span>
+
+            <div class="codigo" id="codigo_div">
+
+            </div>
+
+        </div>
+
+        <div class="info">
+
+            <span class="titulo">
+                Quantidade
+            </span>
+
+            <div class="quantidade" id="quantidade_div">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ÁREA DE CONFERÊNCIA ================= -->
+
+    <main class="main_conferir">
+
+        <div class="conferir" id="conferir">
+
+            <h2>
+                Conferência de Produto
+            </h2>
+
+            <p class="subtitulo">
+                Escaneie ou digite o código do produto
+            </p>
+
+
+            <input
+                type="text"
+                id="input_codigo_conf"
+                class="input_codigo_conf"
+                placeholder="Digite o código"
+                onkeydown="detectarEnterCodigo(event)">
+            <button
+                class="btn_conferir"
+                onclick="conferir_produto()">
+
+                Conferir
+
+            </button>
+
+            <div
+                class="div_res"
+                id="div_res">
+
+                Aguardando leitura...
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>

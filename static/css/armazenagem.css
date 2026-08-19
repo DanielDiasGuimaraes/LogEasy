@@ -1,0 +1,653 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+    font-family:Roboto,sans-serif;
+
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef4ff,
+            #dbe9ff
+        );
+
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+
+    height:110px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #4f8cff
+        );
+
+    color:#fff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0,0,0,.15);
+
+}
+
+
+header h1{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+
+header p{
+
+    margin-top:8px;
+
+    opacity:.95;
+
+    font-size:16px;
+
+}
+
+
+/* ================= MAIN ================= */
+
+main{
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:35px auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+/* ================= CARD ================= */
+
+.card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+.card:hover{
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(0,0,0,.12);
+
+}
+
+
+.card h2{
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+    border-left:
+        6px solid #2563eb;
+
+    padding-left:12px;
+
+}
+
+
+/* ================= LINHA ================= */
+
+.linha{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    align-items:center;
+
+}
+
+
+.linha input{
+
+    flex:1;
+
+    min-width:280px;
+
+}
+
+
+/* ================= INPUTS ================= */
+
+input{
+
+    width:100%;
+
+    height:48px;
+
+    border-radius:10px;
+
+    border:
+        1px solid #d5d5d5;
+
+    padding:
+        0 15px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+
+input:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:
+        0 0 8px
+        rgba(37,99,235,.25);
+
+}
+
+
+input:disabled{
+
+    background:#f1f5f9;
+
+    color:#64748b;
+
+    cursor:not-allowed;
+
+}
+
+
+/* ================= BOTÕES ================= */
+
+button{
+
+    height:48px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:10px;
+
+    padding:
+        0 28px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+    transform:none !important;
+
+}
+
+
+/* ================= AZUL ================= */
+
+.azul{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+
+.azul:hover{
+
+    background:#1e40af;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* ================= TABELA ================= */
+
+.tabela_armazenagem{
+
+    width:100%;
+
+    min-height:320px;
+
+    max-height:420px;
+
+    overflow:auto;
+
+    border:
+        1px solid #d1d5db;
+
+    border-radius:12px;
+
+    background:#fff;
+
+}
+
+
+/* ================= TABELA PADRÃO ================= */
+
+.tabela_armazenagem table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#fff;
+
+}
+
+
+.tabela_armazenagem th{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:14px;
+
+    text-align:left;
+
+    border:
+        1px solid #d1d5db;
+
+    font-size:14px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:2;
+
+}
+
+
+.tabela_armazenagem td{
+
+    padding:13px;
+
+    border:
+        1px solid #d1d5db;
+
+    color:#333;
+
+    font-size:14px;
+
+}
+
+
+.tabela_armazenagem tbody tr:nth-child(even){
+
+    background:#f8fafc;
+
+}
+
+
+.tabela_armazenagem tbody tr:hover{
+
+    background:#eef4ff;
+
+}
+
+
+.tabela_vazia{
+
+    text-align:center;
+
+    padding:30px !important;
+
+    color:#64748b !important;
+
+}
+
+
+/* ================= SCROLL ================= */
+
+.tabela_armazenagem::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+.tabela_armazenagem::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:20px;
+
+}
+
+
+.tabela_armazenagem::-webkit-scrollbar-track{
+
+    background:#f1f5f9;
+
+}
+
+
+/* ================= BLOCO ================= */
+
+.bloco_armazenar{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                280px,
+                1fr
+            )
+        );
+
+    gap:20px;
+
+}
+
+
+/* ================= CAMPO ================= */
+
+.campo{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.campo_end{
+
+    flex-direction:column;
+
+}
+
+
+.campo h3,
+.campo_end h3{
+
+    margin-bottom:8px;
+
+    color:#444;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+
+/* ================= BOTÃO SALVAR ================= */
+
+.area_botao{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-top:30px;
+
+}
+
+
+.verde{
+
+    background:#16a34a;
+
+    color:white;
+
+}
+
+
+.verde:hover{
+
+    background:#15803d;
+
+}
+
+
+/* ================= ALERTAS ================= */
+
+.alerta{
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:20px auto;
+
+    padding:
+        18px 25px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+.alerta span:first-child{
+
+    font-size:25px;
+
+}
+
+
+/* ================= SUCESSO ================= */
+
+.alerta.verde{
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    border-left:
+        8px solid #16a34a;
+
+}
+
+
+/* ================= ERRO ================= */
+
+.alerta.vermelho{
+
+    background:#fee2e2;
+
+    color:#991b1b;
+
+    border-left:
+        8px solid #dc2626;
+
+}
+
+
+/* ================= ATENÇÃO ================= */
+
+.alerta.amarelo{
+
+    background:#fef9c3;
+
+    color:#854d0e;
+
+    border-left:
+        8px solid #eab308;
+
+}
+
+
+/* ================= INFORMAÇÃO ================= */
+
+.alerta.azul{
+
+    background:#dbeafe;
+
+    color:#1e40af;
+
+    border-left:
+        8px solid #2563eb;
+
+}
+
+
+/* ================= ERRO TABELA ================= */
+
+.erro{
+
+    padding:30px;
+
+    text-align:center;
+
+    color:#991b1b;
+
+    font-weight:600;
+
+}
+
+
+/* ================= RESPONSIVO ================= */
+
+@media(max-width:700px){
+
+    header{
+
+        height:auto;
+
+        padding:20px;
+
+    }
+
+
+    header h1{
+
+        font-size:28px;
+
+    }
+
+
+    .card{
+
+        padding:18px;
+
+    }
+
+
+    .linha{
+
+        flex-direction:column;
+
+    }
+
+
+    .linha input{
+
+        width:100%;
+
+    }
+
+
+    button{
+
+        width:100%;
+
+    }
+
+
+    .area_botao{
+
+        justify-content:stretch;
+
+    }
+
+
+    .tabela_armazenagem{
+
+        overflow-x:auto;
+
+    }
+
+
+    .tabela_armazenagem table{
+
+        min-width:900px;
+
+    }
+
+}

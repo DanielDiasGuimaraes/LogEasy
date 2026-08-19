@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Estoque</title>
+
+    <link rel="stylesheet" href="/static/css/estoque.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h1>📦 Estoque</h1>
+
+        <p>Consulta e movimentação de produtos</p>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- ================= CONSULTAR PRODUTO ================= -->
+
+        <section class="card">
+
+            <h2>Consultar produto</h2>
+
+            <div class="linha">
+
+                <input
+                    type="text"
+                    id="codigo_produto_c_e"
+                    placeholder="Digite o código do produto"
+                >
+
+                <button
+                    class="azul"
+                    onclick="consultar_produto_estoque()"
+                >
+                    Consultar
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AÇÕES ================= -->
+
+        <section class="card">
+
+            <h2>Movimentação</h2>
+
+            <div class="linha">
+
+                <button
+                    class="azul"
+                    onclick="pag_mover_produto()"
+                >
+                    Mover produto
+                </button>
+
+                <button
+                    class="verde"
+                    onclick="consultar_estoque()"
+                >
+                    Exibir estoque
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AVISO ================= -->
+
+        <div
+            id="alerta_estoque"
+            class="alerta"
+            style="display:none;"
+        >
+
+            <span id="alerta_icone"></span>
+
+            <span id="alerta_mensagem"></span>
+
+        </div>
+
+
+        <!-- ================= RESULTADO ================= -->
+
+        <section class="card">
+
+            <h2>Estoque</h2>
+
+            <div
+                class="tabela_estoque"
+                id="div_resultado"
+            >
+
+                <div
+                    class="tela"
+                    id="tela_estoque"
+                >
+
+                    <div class="tabela_vazia">
+                        Nenhum produto consultado.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>

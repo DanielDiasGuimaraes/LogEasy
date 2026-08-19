@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Roboto,sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#eef4ff,#dce9ff);
+
+}
+
+/* HEADER */
+
+header{
+
+    height:120px;
+
+    background:linear-gradient(90deg,#2563eb,#4f8cff);
+
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+header h1{
+
+    font-size:40px;
+
+}
+
+header p{
+
+    margin-top:10px;
+    opacity:.9;
+
+}
+
+/* GRID */
+
+main{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:50px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+/* BOTÕES */
+
+main button{
+
+    height:180px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:white;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    transition:.25s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:60px;
+
+}
+
+main button span{
+
+    margin-top:20px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:#333;
+
+}
+
+main button:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(37,99,235,.25);
+
+}
+
+/* SAIR */
+
+.sair{
+
+    background:#ef4444;
+    color:white;
+
+}
+
+.sair span{
+
+    color:white;
+
+}
+
+.sair:hover{
+
+    background:#dc2626;
+
+}

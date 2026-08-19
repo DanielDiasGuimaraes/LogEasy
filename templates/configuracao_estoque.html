@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Configuração de Estoque</title>
+
+    <link rel="stylesheet" href="/static/css/configuracao_estoque.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>⚙️ Configuração de Estoque</h1>
+
+    <p>Gerenciamento de Endereços</p>
+
+</header>
+
+<main>
+
+    <div class="card">
+
+        <h2>Novo Endereço</h2>
+
+        <input
+            type="text"
+            id="input_endereco"
+            placeholder="Digite o endereço">
+
+        <div class="botoes">
+
+            <button class="btn azul"
+                onclick="Cadastrar_endereco_novo()">
+
+                ➕ Cadastrar
+
+            </button>
+
+            <button class="btn vermelho"
+                onclick="Excluir_end()">
+
+                🗑 Excluir
+
+            </button>
+
+            <button class="btn verde"
+                onclick="Listar_endereco()">
+
+                📋 Listar
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div
+        class="div_listar_enderecos"
+        id="div_listar_enderecos">
+
+    </div>
+
+</main>
+
+<div id="notificacao" class="notificacao">
+    <span id="textoNotificacao"></span>
+    <div class="barra"></div>
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>
